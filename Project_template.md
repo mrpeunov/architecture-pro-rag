@@ -124,3 +124,35 @@ python3.12 main.py run_cron
 
 Отдельную БД не загружаю, при желании можно собрать командами выше.
 
+### Задание 4. Реализация RAG-бота с техниками промптинга
+
+Для запуска два сценария есть. ТГ бот:
+
+```bash
+python3.12 main.py run_bot
+```
+
+Ссылка на бот: t.me/peunov_rag_bot
+Чтобы он работал - нужно запустить приложение с корректными кредами (файл .env). Креды приложу к заданию.
+
+Либо же:
+```
+python3.12 main.py run_local_search
+```
+Так же требует кредов.
+
+Примеры успешных ответов:
+
+![success1.png](answers/success1.png)
+![success2.png](answers/success2.png)
+![success3.png](answers/success3.png)
+![success4.png](answers/success4.png)
+![success5.png](answers/success5.png)
+
+Пример, когда бот не знает:
+![not-found1.png](answers/not-found1.png)
+
+В коде применена техника Few-shot. 
+C Chain-of-Thought поигрался, но в финальную работу не добавил,
+так как знания в базе скорее энциклопедические, чем задачи,
+которые нужно решать.
