@@ -1,7 +1,11 @@
 import logging
 from typer import Typer
+from app.cron import run_cron_app
+from app.embeddings import GenerateEmbeddingsPipeline
 from dotenv import load_dotenv
+
 from app.parsing import ParsingPipeline
+
 
 manager = Typer()
 
@@ -18,6 +22,17 @@ def run_parsing():
         replacing_map_path='./configs/replacing-map.json',
     )
     parsing_pipeline.run()
+
+
+@manager.command("run_cron")
+def run_cron():
+    run_cron_app()
+
+
+@manager.command("generate_embeddings")
+def generate_embeddings():
+    pipeline = GenerateEmbeddingsPipeline()
+    pipeline.run()
 
 
 if __name__ == "__main__":
