@@ -1,0 +1,57 @@
+{
+    "characters": [
+        "Eren_Jaeger",
+        "Mikasa_Ackermann",
+        "Armin_Arlelt",
+        "Levi_Ackermann",
+        "Erwin_Smith",
+        "Hange_Zoë",
+        "Reiner_Braun",
+        "Annie_Leonhart",
+        "Bertholdt_Hoover",
+        "Jean_Kirschtein",
+        "Sasha_Braus",
+        "Zeke_Jaeger",
+        "Grisha_Jaeger",
+        "Historia_Reiss",
+        "Connie_Springer",
+        "Carla_Jaeger",
+        "Ymir",
+        "Falco_Grice",
+        "Gabi_Braun"
+    ],
+    "locations": [
+        "Walls",
+        "Shiganshina_District",
+        "Trost_District",
+        "Stohess_District",
+        "Ehrmich_District",
+        "Utgard_Castle",
+        "Ragako",
+        "Liberio",
+        "Paradis_Island",
+        "Marley",
+        "Path"
+    ],
+    "titans": [
+        "Colossal_Titan",
+        "Armored_Titan",
+        "Attack_Titan",
+        "Female_Titan",
+        "Beast_Titan",
+        "Cart_Titan",
+        "Jaw_Titan",
+        "War_Hammer_Titan",
+        "Founding_Titan",
+        "Titan",
+        "Abnormal"
+    ],
+    "organizations": [
+        "Garrison_Regiment",
+        "Military_Police_Regiment",
+        "Warriors",
+        "Marleyan_military",
+        "Anti-Marleyan_Volunteers",
+        "Cadet_Corps",
+    ]
+}
