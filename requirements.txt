@@ -1,0 +1,14 @@
+aiogram==3.24.0
+aiomisc==17.10.3
+typer==0.21.1
+python-dotenv==1.2.1
+redis==7.1.0
+markdownify==1.2.2
+beautifulsoup4==4.14.3
+langchain==1.2.7
+langchain-text-splitters==1.1.0
+Markdown==3.10.1
+sentence-transformers==5.2.2
+chromadb==1.4.1
+openai==2.17.0
+requests==2.32.5
