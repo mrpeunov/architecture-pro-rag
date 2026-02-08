@@ -61,5 +61,11 @@ def run_bot():
     run_bot_app()
 
 
+@manager.command("run_tests")
+def run_tests():
+    from app.test import tests
+
+    tests()
+
 if __name__ == "__main__":
     manager()
