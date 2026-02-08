@@ -185,3 +185,40 @@ C Chain-of-Thought поигрался, но в финальную работу �
 модели, поэтому валидатор может объективно оценить, хорош ли ответ,
 содержит ли он какие-нибудь уязвимости и ещё дополнительно появилась 
 явная проверка на чём базированы ответ.
+
+
+## Задание 6. Автоматическое ежедневное обновление базы знаний
+
+Запуск крона:
+
+```
+python3.12 main.py run_cron
+```
+
+![diagram.png](diagrams/diagram.png)
+
+Выборка логов:
+
+```
+2026-02-08 15:27:37,790 - INFO - Обработан knowledge_base/characters/Iran_Meister.md: 231 чанков
+2026-02-08 15:27:37,802 - INFO - Обработан knowledge_base/characters/Geograpia_Riss.md: 68 чанков
+2026-02-08 15:27:37,811 - INFO - Обработан knowledge_base/characters/Falcon_Crice.md: 61 чанков
+2026-02-08 15:27:37,821 - INFO - Обработан knowledge_base/characters/Misha_Meister.md: 66 чанков
+2026-02-08 15:27:37,830 - INFO - Обработан knowledge_base/characters/Umer.md: 50 чанков
+2026-02-08 15:27:37,846 - INFO - Обработан knowledge_base/characters/Jean_Kirschtein.md: 117 чанков
+2026-02-08 15:27:37,855 - INFO - Обработан knowledge_base/characters/Sasha_Narus.md: 56 чанков
+2026-02-08 15:27:37,872 - INFO - Обработан knowledge_base/characters/Zak_Meister.md: 112 чанков
+
+2026-02-08 15:27:37,894 - INFO - Создание эмбеддингов...
+Batches: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 78/78 [00:05<00:00, 14.42it/s]
+2026-02-08 15:27:43,348 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+2026-02-08 15:27:43,349 - DEBUG - send_request_headers.complete
+2026-02-08 15:27:43,349 - DEBUG - send_request_body.started request=<Request [b'GET']>
+2026-02-08 15:27:43,349 - DEBUG - send_request_body.complete
+2026-02-08 15:27:43,349 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+2026-02-08 15:27:43,351 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'content-type', b'application/json'), (b'content-length', b'55'), (b'date', b'Sun, 08 Feb 2026 12:27:43 GMT')])
+2026-02-08 15:27:43,351 - INFO - HTTP Request: GET http://localhost:8000/api/v2/pre-flight-checks "HTTP/1.1 200 OK"
+
+2026-02-08 15:27:45,866 - INFO - Загружено 2481/2481 чанков
+2026-02-08 15:27:45,877 - INFO - Загружено 2481 чанков в коллекцию 'knowledge_base_1770553657'
+```
